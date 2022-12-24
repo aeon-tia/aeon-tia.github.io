@@ -30,7 +30,7 @@ h1.hello, h1.timing {
    margin-bottom: 10px;
    font-family: 'Fira Sans', sans-serif;
    font-size: 3.2rem;
-   color: #d08770
+   color: #88c0d0
    /* background-image: linear-gradient(to bottom, #ff9400, #ff1ad9);
    background-clip: text;
    -webkit-background-clip: text;
@@ -170,7 +170,7 @@ and (max-device-width : 480px){
 .bookmark-title {
     font-size: 1.3rem;
     font-weight: 500;
-    color: #d08770;
+    color: #88c0d0;
     /* background-image: linear-gradient(to bottom, #ff9400, #ff1ad9);
     background-clip: text;
     -webkit-background-clip: text;
@@ -185,5 +185,5 @@ and (max-device-width : 480px){
     margin: .5em 0em;
 }
 .bookmark:hover {
-    color: #d08770;
+    color: #88c0d0;
 }
