@@ -7,7 +7,7 @@ body {
     background-size: cover;
     height: 100%;
     margin: 0px;
-    background-color: #232a2e;
+    background-color: #2e3440;
 }
 
 ::-webkit-scrollbar { 
@@ -30,7 +30,7 @@ h1.hello, h1.timing {
    margin-bottom: 10px;
    font-family: 'Fira Sans', sans-serif;
    font-size: 3.2rem;
-   color: #a7c080
+   color: #88c0d0
    /* background-image: linear-gradient(to bottom, #ff9400, #ff1ad9);
    background-clip: text;
    -webkit-background-clip: text;
@@ -54,8 +54,8 @@ h1.hello, h1.timing {
     width: 80%;
     padding: .7em .7em;
     box-sizing: border-box;
-    background-color: #2d353b;
-    border: solid 0px #2d353b;
+    background-color: #3b4252;
+    border: solid 0px #3b4252;
     font-family: 'Fira Sans', sans-serif;
     font-size: 1.3rem;
     color: #b5b5a4;
@@ -72,10 +72,10 @@ h1.hello, h1.timing {
     font-family: 'Fira Sans', sans-serif;
     font-weight: 500;
     font-size: 1.8rem;
-    color: #d3c6aa;
+    color: #d8dee9;
     text-align: center;
     text-shadow: 0 1px 5px rgba(0,0,0,.1);
-    background-color: #2d353b;
+    background-color: #3b4252;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     padding: 0.6rem;
@@ -102,7 +102,7 @@ h1.hello, h1.timing {
     text-align: center;
     justify-content: center;
     text-shadow: 0 1px 5px rgba(0,0,0,.1);
-    background-color: #2d353b;
+    background-color: #3b4252;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     padding: 0.8rem;
@@ -151,7 +151,7 @@ and (max-device-width : 480px){
 
 .bookmark-set{
     padding: 1em;
-    background-color: #2d353b;
+    background-color: #3b4252;
     border-radius: 6px;
     font-family: 'Fira Sans', sans-serif;
     backdrop-filter: blur(10px);
@@ -170,7 +170,7 @@ and (max-device-width : 480px){
 .bookmark-title {
     font-size: 1.3rem;
     font-weight: 500;
-    color: #a7c080;
+    color: #88c0d0;
     /* background-image: linear-gradient(to bottom, #ff9400, #ff1ad9);
     background-clip: text;
     -webkit-background-clip: text;
@@ -180,10 +180,10 @@ and (max-device-width : 480px){
 }
 .bookmark {
     text-decoration: none;
-    color: #d3c6aa;
+    color: #e5e9f0;
     display:block;
     margin: .5em 0em;
 }
 .bookmark:hover {
-    color: #a7c080;
+    color: #88c0d0;
 }
