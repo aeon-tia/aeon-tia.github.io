@@ -28,7 +28,7 @@ h1.hello {
 
 h1.hello, h1.timing {
    margin-bottom: 10px;
-   font-family: 'Fira Sans', sans-serif;
+   font-family: 'Cronos Pro', 'Fira Sans', sans-serif;
    font-size: 3.2rem;
    color: #88c0d0
    /* background-image: linear-gradient(to bottom, #ff9400, #ff1ad9);
@@ -56,7 +56,7 @@ h1.hello, h1.timing {
     box-sizing: border-box;
     background-color: #3b4252;
     border: solid 0px #3b4252;
-    font-family: 'Fira Sans', sans-serif;
+    font-family: 'Cronos Pro', 'Fira Sans', sans-serif;
     font-size: 1.3rem;
     color: #b5b5a4;
     outline: none;
@@ -69,7 +69,7 @@ h1.hello, h1.timing {
     position: absolute;
     top: 0.8rem;
     right: 0.8rem;
-    font-family: 'Fira Sans', sans-serif;
+    font-family: 'Cronos Pro', 'Fira Sans', sans-serif;
     font-weight: 500;
     font-size: 1.8rem;
     color: #d8dee9;
@@ -95,7 +95,7 @@ h1.hello, h1.timing {
     width: 2.5rem;
     top: 1rem;
     left: 1rem;
-    font-family: 'Fira Sans', sans-serif;
+    font-family: 'Cronos Pro', 'Fira Sans', sans-serif;
     font-weight: 500;
     font-size: 2rem;
     color: #abebf7;
@@ -153,7 +153,7 @@ and (max-device-width : 480px){
     padding: 1em;
     background-color: #3b4252;
     border-radius: 6px;
-    font-family: 'Fira Sans', sans-serif;
+    font-family: 'Cronos Pro', 'Fira Sans', sans-serif;
     backdrop-filter: blur(10px);
     font-size: 0.9rem;
     font-weight: 400;
