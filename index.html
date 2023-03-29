@@ -204,6 +204,7 @@
         var myDate = new Date();
         var hrs = myDate.getHours();
 	var mins = myDate.getMinutes();
+	var datestr = myDate.toDateString();
         var greet;
         if (hrs >= 5 && hrs < 8)
             greet = "You're up early!";
@@ -216,7 +217,7 @@
         else 
             greet = "It's late, get some rest.";
 
-        document.getElementById('hello').innerHTML = '<r>' + hrs + ':' + mins;
+        document.getElementById('hello').innerHTML = '<r>' + datestr + ', ' + hrs + ':' + mins;
     </script>
 </body>
 
