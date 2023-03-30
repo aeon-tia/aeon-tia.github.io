@@ -204,49 +204,13 @@
         var myDate = new Date();
         var hrs = myDate.getHours();
 		var mins = myDate.getMinutes();
-		var mon_str = myDate.getMonth();
 		var day_str = myDate.getDay();
-		var wkday_str
 		
-        if (mon_str = 0)
-            mon_str = "Jan";
-		else if (mon_str == 1)
-            mon_str = "Feb";
-        else if (mon_str == 2)
-            mon_str = "Mar";
-		else if (mon_str == 3)
-            mon_str = "Apr";
-        else if (mon_str == 4)
-            mon_str = "May";
-		else if (mon_str == 5)
-            mon_str = "Jun";
-        else if (mon_str == 6)
-            mon_str = "Jul";
-        else if (mon_str == 7)
-            mon_str = "Aug";
-        else if (mon_str == 8)
-            mon_str = "Sep";
-        else if (mon_str == 9)
-            mon_str = "Oct";
-        else if (mon_str == 10)
-            mon_str = "Nov";
-        else 
-            mon_str = "Dec";
+		const weekday = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+        const month = ["January","February","March","April","May","June","July","August","September","October","November","December"];
 		
-		if (day_str == 0)
-            wkday_str = "Sun";
-		else if (day_str == 1)
-            wkday_str = "Mon";
-		else if (day_str == 2)
-            wkday_str = "Tue";
-		else if (day_str == 3)
-            wkday_str = "Wed";
-		else if (day_str == 4)
-            wkday_str = "Thu";
-		else if (day_str == 5)
-            wkday_str = "Fri";
-		else 
-            wkday_str = "Sat";
+		let wkday_str = weekday[myDate.getDay()];
+		let mon_str = month[myDate.getMonth()];
 		
 		if (hrs < 10)
 			hrs = '0' + hrs
@@ -255,7 +219,7 @@
 		if (day_str < 10)
 			day_str = '0' + day_str
 		
-        document.getElementById('hello').innerHTML = '<r>' + wkday_str + ', ' + day_str + ' ' + mon_str + ', ' + hrs + ':' + mins;
+        document.getElementById('hello').innerHTML = wkday_str + ', ' + day_str + ' ' + mon_str + ', ' + hrs + ':' + mins;
     </script>
 </body>
 
