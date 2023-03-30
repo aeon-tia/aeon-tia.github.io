@@ -141,7 +141,7 @@ h1.hello, h1.timing {
     font-weight: 400;
     line-height: 1.0;
     width: 25%;
-    min-width: 150px;
+    min-width: 125px;
     height: 10em;
     margin: 0em .5em;
 }
