@@ -30,12 +30,8 @@ h1.hello, h1.timing {
    margin-bottom: 10px;
    font-family: 'Cronos Pro', 'Fira Sans', sans-serif;
    font-size: 2.5rem;
-   color: #88c0d0
-   /* background-image: linear-gradient(to bottom, #ff9400, #ff1ad9);
-   background-clip: text;
-   -webkit-background-clip: text;
-   color: transparent;
-   -webkit-text-fill-color: transparent; */
+   color: #88c0d0;
+   font-weight: 300;
 }
 #search {
     width: 63.5%;
@@ -70,7 +66,7 @@ h1.hello, h1.timing {
     top: 0.8rem;
     right: 0.8rem;
     font-family: 'Cronos Pro', 'Fira Sans', sans-serif;
-    font-weight: 700;
+    font-weight: 400;
     font-size: 1.8rem;
     color: #d8dee9;
     text-align: center;
@@ -96,7 +92,7 @@ h1.hello, h1.timing {
     top: 1rem;
     left: 1rem;
     font-family: 'Cronos Pro', 'Fira Sans', sans-serif;
-    font-weight: 500;
+    font-weight: 400;
     font-size: 2rem;
     color: #abebf7;
     text-align: center;
@@ -159,7 +155,7 @@ h1.hello, h1.timing {
 }
 .bookmark-title {
     font-size: 1.15rem;
-    font-weight: 700;
+    font-weight: 400;
     color: #88c0d0;
     margin: 0em 0em .6em 0em;
 }
