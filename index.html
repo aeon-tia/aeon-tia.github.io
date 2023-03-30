@@ -200,24 +200,60 @@
             document.getElementById('hide-mobile').style.display = 'none';
         }
 
-        // make time of day greeing
+        // make date and clock message
         var myDate = new Date();
         var hrs = myDate.getHours();
-	var mins = myDate.getMinutes();
-	var datestr = myDate.toDateString();
-        var greet;
-        if (hrs >= 5 && hrs < 8)
-            greet = "You're up early!";
-        else if (hrs >= 8 && hrs < 12)
-            greet = "Good morning!";
-        else if (hrs >= 12 && hrs < 17)
-            greet = "Good afternoon!";
-        else if (hrs >= 17 && hrs < 23)
-            greet = "Good evening!";
+		var mins = myDate.getMinutes();
+		var mon_str = myDate.getMonth();
+		var day_str = myDate.getDay();
+		var wkday_str
+		
+        if (mon_str = 0)
+            mon_str = "Jan";
+		else if (mon_str == 1)
+            mon_str = "Feb";
+        else if (mon_str == 2)
+            mon_str = "Mar";
+		else if (mon_str == 3)
+            mon_str = "Apr";
+        else if (mon_str == 4)
+            mon_str = "May";
+		else if (mon_str == 5)
+            mon_str = "Jun";
+        else if (mon_str == 6)
+            mon_str = "Jul";
+        else if (mon_str == 7)
+            mon_str = "Aug";
+        else if (mon_str == 8)
+            mon_str = "Sep";
+        else if (mon_str == 9)
+            mon_str = "Oct";
+        else if (mon_str == 10)
+            mon_str = "Nov";
         else 
-            greet = "It's late, get some rest.";
-
-        document.getElementById('hello').innerHTML = '<r>' + datestr + ', ' + hrs + ':' + mins;
+            mon_str = "Dec";
+		
+		if (day_str = 0)
+            wkday_str = "Sun";
+		else if (day_str = 1)
+            wkday_str = "Mon";
+		else if (day_str = 2)
+            wkday_str = "Tue";
+		else if (day_str = 3)
+            wkday_str = "Wed";
+		else if (day_str = 4)
+            wkday_str = "Thu";
+		else if (day_str = 5)
+            wkday_str = "Fri";
+		else 
+            wkday_str = "Sat";
+		
+		if (hrs < 10)
+			hrs = '0' + hrs
+		if (mins < 10)
+			mins = '0' + mins
+		
+        document.getElementById('hello').innerHTML = '<r>' + wkday_str + ', ' + mon_str + ' ' + day_str + ' ' + hrs + ':' + mins;
     </script>
 </body>
 
