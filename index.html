@@ -14,7 +14,7 @@
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons.min.css">
 </head>
 
-<body>
+<body onload="startTime()">
     <div class="weather-container" id="weather">
         <div class="row">
             <a href="https://www.google.com/search?q=weather" style="text-decoration: none; color: #e5e9f0">
@@ -201,22 +201,41 @@
         }
 
         // make date and clock message
-        var myDate = new Date();
-        var hrs = myDate.getHours();
-		var mins = myDate.getMinutes();
-		var day_str = myDate.getDate();
+//         var myDate = new Date();
+//         var hrs = myDate.getHours();
+// 		var mins = myDate.getMinutes();
+// 		var day_str = myDate.getDate();
 		
-		const weekday = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
-        const month = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
-		let wkday_str = weekday[myDate.getDay()];
-		let mon_str = month[myDate.getMonth()];
+// 		const weekday = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
+//         const month = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+// 		let w = weekday[myDate.getDay()];
+// 		let M = month[myDate.getMonth()];
 		
-		if (hrs < 10)
-			hrs = '0' + hrs
-		if (mins < 10)
-			mins = '0' + mins
+// 		if (hrs < 10)
+// 			hrs = '0' + hrs
+// 		if (mins < 10)
+// 			mins = '0' + mins
 		
-        document.getElementById('hello').innerHTML = wkday_str + ', ' + day_str + ' ' + mon_str + ', ' + hrs + ':' + mins;
+//         document.getElementById('hello').innerHTML = wkday_str + ', ' + day_str + ' ' + mon_str + ', ' + hrs + ':' + mins;
+	    // new clock that updates
+		function startTime() {
+    		const weekday = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
+        	const month = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+			var today = new Date();
+    		var h = today.getHours();
+    		var m = today.getMinutes();
+			var d = today.getDate();
+			let w = weekday[today.getDay()];
+			let M = month[today.getMonth()];
+    		m = checkTime(m);
+			d = checkTime(d);
+    		document.getElementById('hello').innerHTML = w + ", " + d + ' ' + M + ", " + h + ":" + m;
+    		var t = setTimeout(startTime, 500);
+		}
+		function checkTime(i) {
+    		if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+    		return i;
+		}
     </script>
 </body>
 
