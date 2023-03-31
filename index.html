@@ -14,7 +14,7 @@
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons.min.css">
 </head>
 
-<body onload="startTime()">
+<body>
     <div class="weather-container" id="weather">
         <div class="row">
             <a href="https://www.google.com/search?q=weather" style="text-decoration: none; color: #e5e9f0">
@@ -25,7 +25,6 @@
     </div>
     <div class="container">
 		<h1 class="hello"><label id="hello"></label> </h1>
-	    <div class="hello"></div>
     <div id="search">
         <input id="search-field" type="text" value="" placeholder="Search Google" name="search-field"
             onkeypress="return search(event)" />
@@ -89,24 +88,25 @@
 
     <script>
         // Get current time and format
-        function getTime() {
+        function getDateTime() {
             let date = new Date(),
-                min = date.getMinutes(),
-                //sec = date.getSeconds(),
+                months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+                cmonth = months[date.getMonth()],
+                days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
+                cday = days[date.getDay()],
+                cnum = date.getDate();
+				min = date.getMinutes(),
                 hour = date.getHours();
-            return "" +
-                (hour < 10 ? ("0" + hour) : hour) + ":" +
-                (min < 10 ? ("0" + min) : min);// + ":" + 
-                //(sec < 10 ? ("0" + sec) : sec);
+            return "" + cday + ", " + cnum + " " + cmonth ", " + (hour < 10 ? ("0" + hour) : hour) + ":" + (min < 10 ? ("0" + min) : min);
         }
         function getDate() {
             let date = new Date(),
-                months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+                months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
                 cmonth = months[date.getMonth()],
-                days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+                days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
                 cday = days[date.getDay()],
                 cnum = date.getDate();
-            return "" + cday + " " + cnum + " " + cmonth;
+            return "" + cday + ", " + cnum + " " + cmonth ", ";
         }
         window.onload = () => {
             let xhr = new XMLHttpRequest();
@@ -141,12 +141,15 @@
             document.getElementById("clock").innerHTML = getTime();
             document.getElementById("date").innerHTML = getDate();
             // Set clock interval to tick clock
-            setInterval(() => {
-                document.getElementById("clock").innerHTML = getTime();
-            }, 100);
-            setInterval(() => {
-                document.getElementById("date").innerHTML = getDate();
-            }, 100000);
+//             setInterval(() => {
+//                 document.getElementById("clock").innerHTML = getTime();
+//             }, 500);
+//             setInterval(() => {
+//                 document.getElementById("date").innerHTML = getDate();
+//             }, 100000);
+			setInterval(() => {
+                document.getElementById('hello').innerHTML = getDateTime();
+            }, 500);
         }
 
         // Search on enter key event
@@ -218,25 +221,6 @@
 // 			mins = '0' + mins
 		
 //         document.getElementById('hello').innerHTML = wkday_str + ', ' + day_str + ' ' + mon_str + ', ' + hrs + ':' + mins;
-	    // new clock that updates
-		function startTime() {
-    		const weekday = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
-        	const month = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
-			var today = new Date();
-    		var h = today.getHours();
-    		var m = today.getMinutes();
-			var d = today.getDate();
-			let w = weekday[today.getDay()];
-			let mo = month[today.getMonth()];
-    		m = checkTime(m);
-			d = checkTime(d);
-    		document.getElementById('hello').innerHTML = w + ", " + d + ' ' + mo + ", " + h + ":" + m;
-    		var t = setTimeout(startTime, 500);
-		}
-		function checkTime(i) {
-    		if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
-    		return i;
-		}
     </script>
 </body>
 
