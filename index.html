@@ -201,23 +201,29 @@
         }
 
         // make date and clock message
-//         var myDate = new Date();
-//         var hrs = myDate.getHours();
-// 		var mins = myDate.getMinutes();
-// 		var day_str = myDate.getDay();
-		
-// 		const weekday = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
-//         const month = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
-		
-// 		let wkday_str = weekday[myDate.getDay()];
-// 		let mon_str = month[myDate.getMonth()];
-		
-// 		if (hrs < 10)
-// 			hrs = '0' + hrs
-// 		if (mins < 10)
-// 			mins = '0' + mins
-		
-//         document.getElementById('hello').innerHTML = wkday_str + ', ' + day_str + ' ' + mon_str + ', ' + hrs + ':' + mins;
+		function getHello() {
+			var myDate = new Date();
+			var hrs = myDate.getHours();
+			var mins = myDate.getMinutes();
+			var day_str = myDate.getDay();
+
+			const weekday = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
+			const month = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+			let wkday_str = weekday[myDate.getDay()];
+			let mon_str = month[myDate.getMonth()];
+
+			if (hrs < 10)
+				hrs = '0' + hrs
+			if (mins < 10)
+				mins = '0' + mins
+			
+			return '' + wkday_str + ', ' + day_str + ' ' + mon_str + ', ' + hrs + ':' + mins
+		}
+        document.getElementById('hello').innerHTML = getHello();
+	    setInterval(() => {
+            document.getElementById("clock").innerHTML = getHello();
+        }, 1000);
     </script>
 </body>
 
