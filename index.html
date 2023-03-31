@@ -107,19 +107,6 @@
                 cnum = date.getDate();
             return "" + cday + " " + cnum + " " + cmonth;
         }
-	    function getHello() {
-			let date = new Date(),
-                months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
-                cmonth = months[date.getMonth()],
-                days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
-                cday = days[date.getDay()],
-                cnum = date.getDate(),
-				mins = date.getMinutes(),
-                hours = date.getHours();
-            return "" + cday + " " + cnum + " " + cmonth +
-				(hours < 10 ? ("0" + hours) : hours) + ":" +
-                (mins < 10 ? ("0" + mins) : mins);
-		}
         window.onload = () => {
             let xhr = new XMLHttpRequest();
             // Request to open weather map
@@ -152,7 +139,6 @@
             // Set up the clock and date
             document.getElementById("clock").innerHTML = getTime();
             document.getElementById("date").innerHTML = getDate();
-			document.getElementById("hello").innerHTML = getHello();
             // Set clock interval to tick clock
             setInterval(() => {
                 document.getElementById("clock").innerHTML = getTime();
@@ -160,9 +146,6 @@
             setInterval(() => {
                 document.getElementById("date").innerHTML = getDate();
             }, 100000);
-			setInterval(() => {
-                document.getElementById("hello").innerHTML = getHello();
-            }, 500);
         }
 
         // Search on enter key event
