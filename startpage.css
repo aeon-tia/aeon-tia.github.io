@@ -164,7 +164,7 @@ h1.hello, h1.timing {
 .bookmark:hover {
     background-color: #88c0d0;
     color: #3b4252;
-    box-shadow: 0 0 0 3px #88c0d0;
+    box-shadow: 0 4px 2px -2px #88c0d0;
     border-style: none;
     border-radius: 3px;
 }
