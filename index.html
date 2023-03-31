@@ -226,10 +226,10 @@
     		var m = today.getMinutes();
 			var d = today.getDate();
 			let w = weekday[today.getDay()];
-			let M = month[today.getMonth()];
+			let mo = month[today.getMonth()];
     		m = checkTime(m);
 			d = checkTime(d);
-    		document.getElementById('hello').innerHTML = w + ", " + d + ' ' + M + ", " + h + ":" + m;
+    		document.getElementById('hello').innerHTML = w + ", " + d + ' ' + mo + ", " + h + ":" + m;
     		var t = setTimeout(startTime, 500);
 		}
 		function checkTime(i) {
