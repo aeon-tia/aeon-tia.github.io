@@ -30,7 +30,7 @@ h1.hello, h1.timing {
    margin-bottom: 10px;
    font-family: 'Cronos Pro', 'Inter', sans-serif;
    font-size: 2.5rem;
-   color: #986ee2;
+   color: #b083f0;
    font-weight: 300;
 }
 #search {
@@ -152,7 +152,7 @@ h1.hello, h1.timing {
 .bookmark-title {
     font-size: 1.2rem;
     font-weight: 400;
-    color: #986ee2;
+    color: #b083f0;
     margin: 0em 0em .6em 0em;
 }
 .bookmark {
@@ -162,9 +162,9 @@ h1.hello, h1.timing {
     margin: 1ex 0em;
 }
 .bookmark:hover {
-    background-color: #986ee2;
+    background-color: #b083f0;
     color: #2d333b;
-    box-shadow: 0 0 0 2px #986ee2;
+    box-shadow: 0 0 0 2px #b083f0;
     border-style: none;
     border-radius: 3px;
 }
