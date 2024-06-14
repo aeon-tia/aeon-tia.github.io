@@ -7,7 +7,7 @@ body {
     background-size: cover;
     height: 100%;
     margin: 0px;
-    background-color: #2e3440;
+    background-color: #22272e;
 }
 
 ::-webkit-scrollbar { 
@@ -30,7 +30,7 @@ h1.hello, h1.timing {
    margin-bottom: 10px;
    font-family: 'Cronos Pro', 'Inter', sans-serif;
    font-size: 2.5rem;
-   color: #88c0d0;
+   color: #986ee2;
    font-weight: 300;
 }
 #search {
@@ -49,11 +49,11 @@ h1.hello, h1.timing {
     width: 80%;
     padding: .7em .7em;
     box-sizing: border-box;
-    background-color: #3b4252;
-    border: solid 0px #3b4252;
+    background-color: #2d333b;
+    border: solid 0px #2d333b;
     font-family: 'Cronos Pro', 'Inter', sans-serif;
     font-size: 1.3rem;
-    color: #d8dee9;
+    color: #cdd9e5;
     outline: none;
     border-radius: 10px;
     margin-bottom: .5em;
@@ -67,10 +67,10 @@ h1.hello, h1.timing {
     font-family: 'Cronos Pro', 'Inter', sans-serif;
     font-weight: 400;
     font-size: 1.8rem;
-    color: #d8dee9;
+    color: #cdd9e5;
     text-align: center;
     text-shadow: 0 1px 5px rgba(0,0,0,.1);
-    background-color: #3b4252;
+    background-color: #2d333b;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     padding: 0.6rem;
@@ -93,11 +93,11 @@ h1.hello, h1.timing {
     font-family: 'Cronos Pro', 'Inter', sans-serif;
     font-weight: 400;
     font-size: 2rem;
-    color: #abebf7;
+    color: #adbac7;
     text-align: center;
     justify-content: center;
     text-shadow: 0 1px 5px rgba(0,0,0,.1);
-    background-color: #3b4252;
+    background-color: #2d333b;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     padding: 0.8rem;
@@ -134,7 +134,7 @@ h1.hello, h1.timing {
 
 .bookmark-set{
     padding: 1em;
-    background-color: #3b4252;
+    background-color: #2d333b;
     border-radius: 6px;
     font-family: 'Cronos Pro', 'Inter', sans-serif;
     backdrop-filter: blur(10px);
@@ -152,19 +152,19 @@ h1.hello, h1.timing {
 .bookmark-title {
     font-size: 1.2rem;
     font-weight: 400;
-    color: #88c0d0;
+    color: #986ee2;
     margin: 0em 0em .6em 0em;
 }
 .bookmark {
     text-decoration: none;
-    color: #e5e9f0;
+    color: #cdd9e5;
     display:block;
     margin: 1ex 0em;
 }
 .bookmark:hover {
-    background-color: #88c0d0;
-    color: #3b4252;
-    box-shadow: 0 0 0 2px #88c0d0;
+    background-color: #986ee2;
+    color: #2d333b;
+    box-shadow: 0 0 0 2px #986ee2;
     border-style: none;
     border-radius: 3px;
 }
